@@ -1,0 +1,17 @@
+<div id="container-form-login" x-data="{ removeElement: () => $el.remove() }" @click="removeElement()"
+  class="fixed flex justify-center items-center top-0 left-0 h-screen w-screen bg-[#000000aa]">
+  <form id="form_login" hx-post="/user/login" hx-target="body" hx-swap="afterbegin" @click.stop
+    class="form_auth p-7 rounded bg-white">
+    <button type="button" @click="removeElement()">Voltar</button>
+    <h1 class="text-center block font-medium text-2xl">Entre agora!</h1>
+    <div class="m-4 flex justify-between">
+      <label class="self-center border-b-2 border-fuchsia-950 p-2" for="email">E-mail</label>
+      <input required class="p-2 border-b-2 grow border-fuchsia-950" type="text" name="email" id="email">
+    </div>
+    <div class="m-4 flex justify-between">
+      <label class="self-center border-b-2 border-fuchsia-950 p-2" for="password">Senha</label>
+      <input required class="p-2 border-b-2 grow border-fuchsia-950" type="password" name="password" id="password">
+    </div>
+    <button class="bg-fuchsia-950 block text-neutral-100 rounded py-2 px-3 mx-auto mt-12">Login</button>
+  </form>
+</div>

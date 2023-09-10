@@ -1,0 +1,16 @@
+
+  <div class="h-screen flex flex-col justify-center items-center">
+    <div id="wrapper_h1_welcome">
+    <h1 id="h1_welcome" class="text-cyan-950 text-4xl font-bold text-center">Olá, Desconhecido!</h1>
+    </div>
+    
+    <main class="w-[800px] mx-auto p-8 m-8">
+      <div class="flex justify-center">
+        <button class="bg-fuchsia-950 text-neutral-100 rounded py-2 px-3 mx-2 hover:bg-fuchsia-800"  hx-target="body" hx-swap="afterbegin"
+          hx-get="components/form/login">login</button>
+        <button class="bg-fuchsia-950 text-neutral-100 rounded py-2 px-3 mx-2 hover:bg-fuchsia-800"  hx-target="body" hx-swap="afterbegin"
+          hx-get="components/form/register">Register</button>
+      </div>
+      <div class="pt-8 text-center"><a hx-get="components/form/forgot" hx-target="body" hx-swap="afterbegin" class="text-fuchsia-950 font-bold hover:text-fuchsia-800 underline">Esqueci minha senha!</a></div>
+    </main>
+  </div>

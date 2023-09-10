@@ -1,0 +1,19 @@
+<div id="container-form-register" x-data="{ removeElement: () => $el.remove() }" @click="removeElement()"
+  class="fixed flex justify-center items-center top-0 left-0 h-screen w-screen bg-[#000000aa]">
+  <form id="form-register" @click.stop class="form_auth p-7 rounded bg-white" hx-put="/users/<%= @id %>"
+    hx-target="body" hx-swap="afterbegin">
+    <button type="button" @click="removeElement()">Voltar</button>
+    <h1 class="text-center block font-medium text-2xl">Editar meus dados</h1>
+    <div class="m-4 flex justify-between">
+      <label class="self-center border-b-2 border-fuchsia-950 p-2" for="name">Nome</label>
+      <input required class="p-2 border-b-2 grow border-fuchsia-950" type="text" name="name" id="name"
+        value="<%= @name %>">
+    </div>
+    <div class="m-4 flex justify-between">
+      <label class="self-center border-b-2 border-fuchsia-950 p-2" for="email">E-mail</label>
+      <input required class="p-2 border-b-2 grow border-fuchsia-950" type="text" name="email" id="email"
+        value="<%= @email %>">
+    </div>
+    <button class="bg-fuchsia-950 block text-neutral-100 rounded py-2 px-3 mx-auto mt-12">Salvar</button>
+  </form>
+</div>
